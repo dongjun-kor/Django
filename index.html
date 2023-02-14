@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ML Model Prediction</title>
+  </head>
+  <body>
+    <h1>Upload your file</h1>
+    <form action="{% url 'process' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="file">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
